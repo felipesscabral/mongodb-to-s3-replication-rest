@@ -1,0 +1,6 @@
+# this configuramtion must be inserted into crontab, linux. Use the command crontab -e to edi then, copy and paste
+
+0 7 * * * /usr/bin/python3 /home/ec2-user/denox_s3_loader.py loadControlTable
+#*/10 0-14 * * * /usr/bin/python3 /home/ec2-user/denox_s3_loader.py biuldPartition
+*/10 * * * * /usr/bin/python3 /home/ec2-user/denox_s3_loader.py biuldPartition
+0 3 * * * /usr/bin/python3 /home/ec2-user/denox_s3_loader.py deleteDocuments
